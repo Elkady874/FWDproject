@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output ,EventEmitter} from '@angular/core';
 import { CartItem } from 'src/app/Models/CartItem';
+import { Item } from 'src/app/Models/Item';
+import { ProdcutService } from 'src/app/Services/prodcut.service';
 
 @Component({
   selector: 'app-cart-item',
@@ -16,14 +18,21 @@ export class CartItemComponent implements OnInit {
     amount:0
   };
   @Input() amount :number=0;
-  constructor( 
-  ) { }
-  ngOnChanges(){  
-    alert("tt");  
+  @Output() totalEmit:EventEmitter<number>=new EventEmitter;
+  total:number=0;
+  constructor( private productService :ProdcutService) { }
+ ngOnChanges(){  
    //this.cartItems.map(m=>this.total=m.price*m.amount+this.total);
   }
   ngOnInit(): void {
    
   }
-
+  amountChanged(item:Item,amount:number){
+    this.productService.amountChanged(item,amount);
+    this.productService.cartItems.map(m=>this.total=m.price*m.amount+this.total);
+    this.sendTotal(this.total);
+  }
+sendTotal(total:number){
+  this.totalEmit.emit(total);
+}
 }

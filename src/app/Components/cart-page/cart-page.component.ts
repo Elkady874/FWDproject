@@ -9,17 +9,26 @@ import { ProdcutService } from 'src/app/Services/prodcut.service';
   styleUrls: ['./cart-page.component.css']
 })
 export class CartPageComponent implements OnInit {
-  @Input() cartItems :CartItem[]=[];
-@Input() total:number=0;
-  constructor(private productService :ProdcutService,private r:Router) { }
-  ngOnChanges(){  
+   cartItems :CartItem[]=[];
+   fullName:string;
+   address:string;
+   credit:string;
+   total:number=0;
+
+  constructor(private productService :ProdcutService,private r:Router) {
+    this.fullName="";
+    this.address="";
+    this.credit="";
+    this.cartItems=this.productService.cartItems;
+   }
+  
+  ngOnInit(): void {
    
     this.cartItems.map(m=>this.total=m.price*m.amount+this.total);
-  }
-  ngOnInit(): void {
-    this.cartItems=this.productService.cartItems;
-    this.cartItems.map(m=>this.total=m.price*m.amount+this.total);
 
+  }
+  newTotal(total:number){
+    this.total=total;
   }
   clear(){
     alert("you have been checcked out");

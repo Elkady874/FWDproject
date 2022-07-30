@@ -59,6 +59,27 @@ let a =0;
   }
   setItem(item:Item){this.clickedItem=item;}
   getItem( ) : Item{return this.clickedItem as Item;}
-
-
+  amountChanged(item:Item,amount:number) {
+    try{
+ let a =0;
+ 
+   this.cartItems.forEach((value,index)=>{
+     if(value.id==item.id){
+       this.cartItems.splice(index,1);
+     }
+   });
+   
+     this.cartItems?.push(
+       { id:item.id as number,
+         name:item.name as string,
+         description:item.description as string,
+         price:item.price as number,
+         url:item.url as string,
+         amount:amount as number
+         
+       }
+     );
+ 
+    }catch(e){alert(e);}
+   }
 }

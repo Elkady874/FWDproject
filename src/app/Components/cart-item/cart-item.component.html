@@ -5,5 +5,5 @@
     <label for="price">${{cartItem.price}}</label>
     <br>
     <label for="amount">Amount:</label>
-    <input class="number-input" type="number" id="amount" name="amount" step="1"   [(ngModel)]="cartItem.amount" >
+    <input class="number-input" type="number" id="amount" name="amount" step="1" (change)="amountChanged(cartItem,cartItem.amount)"   [(ngModel)]="cartItem.amount" >
 </div>
