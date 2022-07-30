@@ -1,0 +1,27 @@
+img {
+    border-radius: 10px;
+    width: 320px;
+  }
+  
+  .select-input {
+    width: 108px; 
+  }
+  
+  .detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+   }
+  
+  .detail-item {
+    margin-left: 128px;
+    margin-right: 128px;
+  }
+  
+  .back-link {
+    margin-top: 330px;
+    margin-right: auto;
+  }

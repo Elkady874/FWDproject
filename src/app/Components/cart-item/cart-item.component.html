@@ -1,0 +1,9 @@
+<img class=".img" style="width: 100px; border-radius: 10px;" src={{cartItem.url}} alt={{cartItem.name}}>
+<div class="cart-item-details">
+    <label for="name">{{cartItem.name}}</label>
+    <br>
+    <label for="price">${{cartItem.price}}</label>
+    <br>
+    <label for="amount">Amount:</label>
+    <input class="number-input" type="number" id="amount" name="amount" step="1"   [(ngModel)]="cartItem.amount" >
+</div>

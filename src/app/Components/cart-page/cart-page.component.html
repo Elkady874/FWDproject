@@ -1,0 +1,18 @@
+
+        <form action="submit" style="margin-left:800px; position: fixed;" #form1="ngForm">
+            <p>Full Name</p>
+            <input  type="text" placeholder="minimum 3 charachter" required minlength="3" >
+            <br><br>
+            <p>Address</p>
+            <input  type="text" placeholder="minimum 6 charachter" required minlength="6" >
+            <br><br>
+            <p >Credit Card Number</p>
+            <input  type="text" placeholder="16-digit Number" required minlength="16" >
+            <br><br>
+            <input type="submit" value="submit" class="btn btn-primary" (click)="clear()" [disabled]="form1.invalid"> 
+        </form>
+        <div class="cart-panel">
+            <app-cart-item class="cart-item" *ngFor="let item of cartItems; " [cartItem]="item" [amount]="item.amount">
+            </app-cart-item>
+            <p>Total: $ {{total}}</p>
+        </div>

@@ -1,0 +1,30 @@
+
+<div class="detail-container">
+     <img src={{item.url}} alt="">
+    <div class="detail-item">
+
+    <h3 >{{item.name}}</h3>
+    <h5>${{item.price}}</h5>
+    <p>{{item.description}}</p>
+    
+<select class="select-input" name="Quantity" [(ngModel)]="amount">
+<option selected="selected" value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+        </select>
+       
+    </div>
+    <div style="align-items: center; ">
+        <button class="btn btn-primary" (click)="addCart(item)" >Add to cart</button>
+    </div>
+        <a href="/ProductList">Goto ProductList</a>
+   
+   
+</div>
