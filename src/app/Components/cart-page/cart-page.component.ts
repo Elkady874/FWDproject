@@ -31,7 +31,7 @@ export class CartPageComponent implements OnInit {
     this.total=total;
   }
   clear(){
-    alert("you have been checcked out");
+    alert("you have been checked out");
     this.productService.clearCart();
     this.r.navigateByUrl('/sucess');
 
