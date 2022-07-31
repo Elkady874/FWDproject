@@ -2,8 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 ## purpose 
-it illustate whhat i hhave learned and during these course 
-
+it illustate whhat i hhave learned and during these course
+## conests of 8 compponents 
+you can accesss under /src/app/component
+## 2 modells 
+/src/app/modell
 ## number of pages 
 this app consists of main 3 pages (productlist,cart,itemdetails) you can naviate using routes 
 ## what should I do 
