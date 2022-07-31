@@ -5,5 +5,6 @@
     <label for="price">${{cartItem.price}}</label>
     <br>
     <label for="amount">Amount:</label>
-    <input class="number-input" type="number" id="amount" name="amount" step="1" (change)="amountChanged(cartItem,cartItem.amount)"   [(ngModel)]="cartItem.amount" >
+    <input class="number-input" type="number" id="amount" name="amount" step="1" min="1" (ngModelChange)="amountChanged(cartItem,$event)"   [(ngModel)]="cartItem.amount" >
+    <button (click)="removeFromCart(cartItem)" class="btn btn-primary"> remove rom your cart</button>
 </div>

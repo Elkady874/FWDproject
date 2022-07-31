@@ -82,4 +82,12 @@ let a =0;
  
     }catch(e){alert(e);}
    }
+   removeItem(item:Item){
+    this.cartItems.forEach((value,index)=>{
+      if(value.id==item.id){
+        this.cartItems.splice(index,1);
+      }
+    });
+    
+   }
 }

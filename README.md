@@ -1,7 +1,13 @@
 # FWDproject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+## purpose 
+it illustate whhat i hhave learned and during these course 
 
+## number of pages 
+this app consists of main 3 pages (productlist,cart,itemdetails) you can naviate using routes 
+## what should I do 
+it seems lie iam going to write something deep but realy I do not knoww wwhat to write 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
